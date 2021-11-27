@@ -8,6 +8,18 @@ body {
 
 h1 {
     font-size: 6vw;
+    transition: all 1s;
+}
+
+h1:hover{
+    transition: all 1s;
+    text-shadow: 1px 1px #d3d3d3,
+        2px 2px #b2b2b2,
+        4px 4px #8d8d8d,
+        6px 6px #606060,
+        8px 8px #424242,
+        10px 10px #1f1f1f,
+        12px 12px black;
 }
 
 h2 {

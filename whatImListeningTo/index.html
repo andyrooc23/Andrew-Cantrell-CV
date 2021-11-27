@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
-    <script type = "text/javascript" src="script.js"></script>
-    <title>Andrew's Music</title>
-</head>
-<body>
-
-    <div class="headerBox">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Andrew's Music</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
         <span>
             <button class="button" onclick="myPage()" ><span>Back</span></button>
-            <h1>My Current Music Selection</h1>
         </span>
-    </div>
-    <iframe src="https://open.spotify.com/embed/playlist/1xsSuVnj3EiyaYIppm9yUm" frameBorder="0" allowtransparency="true" allow="encrypted-media" class="spotifyFrame"></iframe>
-    <iframe src="https://open.spotify.com/embed/playlist/07RYVMj7FwdObytNKchvbm" frameBorder="0" allowtransparency="true" allow="encrypted-media" class="spotifyFrame"></iframe>
-    <iframe src="https://open.spotify.com/embed/playlist/6Q3Qo3XxSj5Cu9pQJlBfzG" frameBorder="0" allowtransparency="true" allow="encrypted-media" class="spotifyFrame"></iframe>
-    <iframe src="https://open.spotify.com/embed/playlist/7kpLrZzk98PCIwjzt4SWMd" frameBorder="0" allowtransparency="true" allow="encrypted-media" class="spotifyFrame"></iframe>
-</body>
+        <div class="container">
+            <div class="title">ANDREW'S PLAYLISTS</div>
+
+            <div class="select-box">
+                <div class="options-container">
+                    <div class="option">
+                        <input
+                                type="radio"
+                                class="radio"
+                                id="breakfast"
+                                name="category"
+                                src="https://open.spotify.com/embed/playlist/07RYVMj7FwdObytNKchvbm?utm_source=generator"
+                        />
+                        <label for="breakfast">Breakfast in underwear</label>
+                    </div>
+
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="indie" name="category" src="https://open.spotify.com/embed/playlist/44hfhnftvzhyrE7gtIrmLg?utm_source=generator" />
+                        <label for="indie">Upbeat Indie Pop</label>
+                    </div>
+
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="lofi" name="category" src="https://open.spotify.com/embed/playlist/2Al9G2jrWkwDlRFMZaw1GX?utm_source=generator" />
+                        <label for="lofi">lofi Coding</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="friends" name="category" src="https://open.spotify.com/embed/playlist/1xsSuVnj3EiyaYIppm9yUm?utm_source=generator" />
+                        <label for="friends">Having friends over? I might be</label>
+                    </div>
+                </div>
+                <div class="selected">
+                    Select Playlist To Show
+                </div>
+
+
+            </div>
+        </div>
+        <iframe src="https://open.spotify.com/embed/playlist/1xsSuVnj3EiyaYIppm9yUm" allowtransparency="true" allow="encrypted-media" class="spotifyFrame" align="'center"></iframe>
+
+        <script src="script.js"></script>
+        <div class="foot">
+            <div class = "bottom">
+                This Website was created and is maintained by Andrew Cantrell for the purpose
+                of education and exploration.<br> Feel free to visit the source code and use it for
+                your own projects.<br> Source code <a style="color: #CB00CB" href="https://github.com/andyrooc23/Andrew-Cantrell-CV">HERE</a>.
+            </div>
+        </div>
+    </body>
 </html>

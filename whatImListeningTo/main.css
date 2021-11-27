@@ -1,28 +1,121 @@
-.spotifyFrame{
-    padding-left: 2.5vw;
-    padding-top: 2vh;
-    align-content: center;
-    width: 20vw;
-    height: 80vh;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom right, white, lightskyblue, mediumpurple, rebeccapurple);
-    height: calc(100vh - 3px);
+body {
+    font-family: "Roboto", sans-serif;
+    background: radial-gradient(#c4c4bb, #08aae5, #CB00CB) no-repeat;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 
-h1{
-    font-family: Arial, serif;
-    font-size: 60px;
-    margin: 10px 0;
+.title{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    width: 75%;
+    padding-top: 5vh;
     text-align: center;
-    padding-bottom: 15px;
-    color: #fefff9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:60px;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    text-shadow:
+            5px 5px #A41CF5,
+            10px 10px #000000;
 }
 
+.container {
+    padding: 16px;
+}
+
+.select-box {
+    display: flex;
+    width: max(300px, 30vw);
+    margin: auto;
+    flex-direction: column;
+}
+
+.select-box .options-container {
+    background: #2f3640;
+    color: #cecdcd;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected {
+    background: #2f3640;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    order: 0;
+}
+
+.selected::after {
+    content: url("img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+
+    transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.select-box .option:hover {
+    background: #414b57;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
+}
 
 .headerBox{
     border-radius: 25px;
@@ -40,27 +133,28 @@ h1{
     text-align: right;
     font-size: 28px;
     background-color: rgba(0, 0, 0, 0);
-    padding: 10px;
+    padding: 10px 10px 0;
     width: 130px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 3px;
+    color: #000000;
 }
 
 .button span {
     cursor: pointer;
     display: block;
     position: relative;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .button span:after {
-    content: '\00bb';
+    content: '\00ab';
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .button:hover span {
@@ -70,4 +164,26 @@ h1{
 .button:hover span:after {
     opacity: 1;
     right: 0;
+    transform: rotateX(360deg);
+}
+.spotifyFrame{
+    width: 60vw;
+    height: 65vh;
+    margin: auto;
+    padding: 1%;
+    background-color: transparent;
+    border-style:none;
+    object-position: center;
+    display: block;
+}
+
+.foot{
+    background-color: rgba(58, 58, 58, 0.47);
+    color: #abaaaa;
+    vertical-align: baseline;
+    padding-bottom: 5px;
+    margin-top: 5vh;
+    font-size: x-small;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
 }
