@@ -170,11 +170,13 @@ body {
     width: 60vw;
     height: 65vh;
     margin: auto;
-    padding: 1%;
+    padding: 0;
+    border-radius: 1%;
     background-color: transparent;
     border-style:none;
     object-position: center;
     display: block;
+    box-shadow: 0 3px 10px rgb(0, 0, 0);
 }
 
 .foot{

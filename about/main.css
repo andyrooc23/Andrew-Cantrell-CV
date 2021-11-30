@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
+
 :root {
     --color-white: #ffffff;
     --color-cobalt: #1878E0;
@@ -12,8 +14,6 @@
     --color-success: #6BC4A6;
     --color-error: #F76E40;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -152,4 +152,16 @@ h1 {
     text-align: right;
     font-size: 6vw;
     margin: 10px 0;
+}
+
+
+.coverLetter{
+    position: fixed;
+    padding-top: 50vh;
+    padding-left: 10vw;
+    font-size: 50px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#e79393, #b00000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
