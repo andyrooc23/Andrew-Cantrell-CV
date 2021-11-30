@@ -1,155 +1,80 @@
-body {
-    background: url("img/background.jpeg") no-repeat fixed center; /* Links to your background image, which you can also replace with a URL. */
-    background-size: cover; /* Image covers page. */
-    text-align: center;
-    color: white; /* Text color. */
-    font-family: 'Avenir', sans-serif; /* Font: sans-serif included in case browser doesn't support first option. */
-}
+/* I found James Bosworth's codepen the other day (https://codepen.io/bosworthco/) and saw his work on shifted perspective and wanted to learn how to make it.
+I also found this Youtube video (https://www.youtube.com/watch?v=LgiadQQM6mo&list=PLbu98QxRH81KxxMclY_ZRmm4Dac-n7cSA) which is a great tutorial of the project. Enjoy!
+*/
 
-h1 {
-    font-size: 6vw;
-    transition: all 1s;
-}
-
-h1:hover{
-    transition: all 1s;
-    text-shadow: 1px 1px #d3d3d3,
-        2px 2px #b2b2b2,
-        4px 4px #8d8d8d,
-        6px 6px #606060,
-        8px 8px #424242,
-        10px 10px #1f1f1f,
-        12px 12px black;
-}
-
-h2 {
-    font-size: 3vw;
-}
-
-/* This just centers the header container vertically on the page. */
-.container-fluid {
-    height: 200px;
-    width: 100%;
-
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-/* Styling for icons. */
-.fa {
-    color: white;
-    margin: 10px 5px;
-    font-size: 3em !important;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-
-.menuPointer{
-    font-size:28px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor:pointer;
-    padding: 10px;
-    display: inline-block;
-    text-align: right;
-    border: none;
-}
-
-.button {
-    display: block;
-    border-radius: 4px;
-    border: none;
-    text-align: right;
-    font-size: 28px;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 10px;
-    width: 130px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 3px;
-}
-
-.button span {
-    cursor: pointer;
-    display: block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-.button:hover span {
-    padding-right: 25px;
-}
-
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-.overlay {
+html {
     height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
 }
 
-.overlay-content {
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1f1;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+}
+
+.perspective-text {
+    color: white;
+    font-family: Arial;
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.perspective-line {
+    height: 50px;
+    overflow: hidden;
     position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
 }
 
-.overlay a {
-    padding: 8px;
+p {
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.5s ease-in-out;
+}
+
+.perspective-line:nth-child(odd) {
+    transform: skew(60deg, -30deg) scaleY(0.667);
+}
+
+.perspective-line:nth-child(even) {
+    transform: skew(0deg, -30deg) scaleY(1.337);
+}
+
+.perspective-text:hover p {
+    transform: translate(0, -50px);
+}
+
+.perspective-line:nth-child(1) {
+    left: 29px;
+}
+
+.perspective-line:nth-child(2) {
+    left: 58px;
+    background: #f07e6e;
+}
+
+.perspective-line:nth-child(3) {
+    left: 87px;
+    background: #84cdfa;
+}
+
+.perspective-line:nth-child(4) {
+    left: 116px;
+    background: #5ad1cd;
+}
+
+.perspective-line:nth-child(5) {
+    left: 145px;
+}
+
+a {
+    color: white;
     text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
 }

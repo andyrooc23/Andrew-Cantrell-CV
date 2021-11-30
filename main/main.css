@@ -1,0 +1,155 @@
+body {
+    background: url("img/background.jpeg") no-repeat fixed center; /* Links to your background image, which you can also replace with a URL. */
+    background-size: cover; /* Image covers page. */
+    text-align: center;
+    color: white; /* Text color. */
+    font-family: 'Avenir', sans-serif; /* Font: sans-serif included in case browser doesn't support first option. */
+}
+
+h1 {
+    font-size: 6vw;
+    transition: all 1s;
+}
+
+h1:hover{
+    transition: all 1s;
+    text-shadow: 1px 1px #d3d3d3,
+        2px 2px #b2b2b2,
+        4px 4px #8d8d8d,
+        6px 6px #606060,
+        8px 8px #424242,
+        10px 10px #1f1f1f,
+        12px 12px black;
+}
+
+h2 {
+    font-size: 3vw;
+}
+
+/* This just centers the header container vertically on the page. */
+.container-fluid {
+    height: 200px;
+    width: 100%;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* Styling for icons. */
+.fa {
+    color: white;
+    margin: 10px 5px;
+    font-size: 3em !important;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.menuPointer{
+    font-size:28px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor:pointer;
+    padding: 10px;
+    display: inline-block;
+    text-align: right;
+    border: none;
+}
+
+.button {
+    display: block;
+    border-radius: 4px;
+    border: none;
+    text-align: right;
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.button span {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
