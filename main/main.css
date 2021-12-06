@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
+
 body {
     background: url("img/background.jpeg") no-repeat fixed center; /* Links to your background image, which you can also replace with a URL. */
     background-size: cover; /* Image covers page. */
@@ -8,7 +10,9 @@ body {
 
 h1 {
     font-size: 6vw;
+    font-family: 'Maven Pro', sans-serif;
     transition: all 1s;
+    letter-spacing: 0.5vw;
 }
 
 h1:hover{
@@ -23,16 +27,18 @@ h1:hover{
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: 2vw;
+    font-family: 'Maven Pro', sans-serif;
+    letter-spacing: 0.5vw;
 }
 
 /* This just centers the header container vertically on the page. */
 .container-fluid {
-    height: 200px;
+    height: auto;
     width: 100%;
 
     position: absolute;
-    top:0;
+    top:18vh;
     bottom: 0;
     left: 0;
     right: 0;
@@ -53,30 +59,19 @@ h2 {
 }
 
 
-.menuPointer{
-    font-size:28px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor:pointer;
-    padding: 10px;
-    display: inline-block;
-    text-align: right;
-    border: none;
-}
-
 .button {
     display: block;
     border-radius: 4px;
+    font-family: 'Maven Pro', sans-serif;
     border: none;
-    text-align: right;
-    font-size: 28px;
+    text-align: left;
+    font-size: 2vw;
     background-color: rgba(0, 0, 0, 0);
     padding: 10px;
-    width: 130px;
+    width: 10vw;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 3px;
+    margin: 3px 3px 3px 2vw;
 }
 
 .button span {
@@ -104,52 +99,6 @@ h2 {
     right: 0;
 }
 
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
+.lottie{
+    margin: 0 auto;
 }
