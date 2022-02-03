@@ -11,15 +11,14 @@ body {
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 250px;
+    margin-top: 25vh;
 }
 
 .perspective-text {
     color: white;
     font-family: Arial, sans-serif;
-    font-size: 58px;
+    font-size: 350%;
     font-weight: 900;
-    letter-spacing: -2px;
     text-transform: uppercase;
 }
 
