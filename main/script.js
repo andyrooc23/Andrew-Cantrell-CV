@@ -2,6 +2,10 @@ function myPage() {
     window.location = ("about/index.html");
 }
 
+function myProjects() {
+    window.location = ("Projects/index.html");
+}
+
 function myMusicPage(){
     window.location = ("whatImListeningTo/index.html");
 }
