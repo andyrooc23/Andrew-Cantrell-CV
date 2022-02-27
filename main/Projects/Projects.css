@@ -944,7 +944,6 @@
 .u-section-5 .u-group-1 {
   width: 385px;
   min-height: 513px;
-  height: auto;
   margin: -128px auto 53px 0;
 }
 
@@ -997,7 +996,6 @@
 
   .u-section-5 .u-group-1 {
     margin-bottom: 60px;
-    height: auto;
   }
 }
 
@@ -1125,13 +1123,19 @@
   height: 403px;
   width: 1014px;
   background-image: linear-gradient(#db545a, #478ac9);
-  margin: 64px 0 0 auto;
+  --animation-custom_in-scale: 1;
+  margin: 64px 1px 0 auto;
 }
 
 .u-section-6 .u-shape-2 {
   width: 757px;
   height: 452px;
   background-image: linear-gradient(#478ac9, #db545a);
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
   margin: -171px auto 0 0;
 }
 
@@ -1190,6 +1194,7 @@
 
   .u-section-6 .u-shape-1 {
     width: 940px;
+    margin-right: 0;
   }
 
   .u-section-6 .u-layout-wrap-1 {
@@ -1319,7 +1324,6 @@
   width: 990px;
   background-image: linear-gradient(#db545a, #478ac9);
   min-height: 1048px;
-  height: auto;
   margin: 4px auto 60px calc(((100% - 1140px) / 2) + 75px);
 }
 
@@ -1331,7 +1335,6 @@
   width: 470px;
   min-height: 301px;
   background-image: none;
-  height: auto;
   margin: 15px auto 0;
 }
 
@@ -1352,7 +1355,6 @@
 .u-section-7 .u-group-3 {
   min-height: 179px;
   background-image: none;
-  height: auto;
   width: 930px;
   margin: 45px auto 0;
 }
@@ -1374,7 +1376,6 @@
 .u-section-7 .u-group-4 {
   min-height: 179px;
   background-image: none;
-  height: auto;
   width: 930px;
   margin: 45px auto 0;
 }
@@ -1396,7 +1397,6 @@
 .u-section-7 .u-group-5 {
   min-height: 179px;
   background-image: none;
-  height: auto;
   width: 930px;
   margin: 45px auto 0;
 }
@@ -1423,25 +1423,11 @@
   .u-section-7 .u-group-1 {
     width: 940px;
     margin-left: calc(((100% - 940px) / 2));
-    height: auto;
   }
 
   .u-section-7 .u-group-2 {
     width: calc(((100% - 940px) / 2) + 420px);
     margin-top: -40px;
-    height: auto;
-  }
-
-  .u-section-7 .u-group-3 {
-    height: auto;
-  }
-
-  .u-section-7 .u-group-4 {
-    height: auto;
-  }
-
-  .u-section-7 .u-group-5 {
-    height: auto;
   }
 }
 
@@ -1541,7 +1527,6 @@
 .u-section-8 .u-group-1 {
   min-height: 448px;
   width: 965px;
-  height: auto;
   margin: 60px auto;
 }
 
@@ -1587,7 +1572,6 @@
 @media (max-width: 1199px) {
   .u-section-8 .u-group-1 {
     width: 940px;
-    height: auto;
   }
 
   .u-section-8 .u-form-1 {
